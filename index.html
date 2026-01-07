@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Âmbar & Brasa | Steakhouse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #e5e5e5; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .amber-text { color: #d97706; }
+        .bg-card { background-color: #171717; border: 1px solid #262626; }
+        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1469'); background-size: cover; background-position: center; }
+    </style>
+</head>
+<body>
+
+    <nav class="p-6 flex justify-between items-center border-b border-neutral-800 sticky top-0 bg-black z-50">
+        <div class="text-2xl font-bold amber-text">ÂMBAR & <span class="text-white">BRASA</span></div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+            <a href="#cardapio" class="hover:text-amber-500 transition">Cardápio</a>
+            <a href="#reservas" class="hover:text-amber-500 transition">Reservas</a>
+            <a href="#contato" class="hover:text-amber-500 transition">Contato</a>
+        </div>
+        <button class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full text-sm font-semibold transition">RESERVAR</button>
+    </nav>
+
+    <header class="h-[70vh] flex flex-col justify-center items-center text-center px-4 hero-gradient">
+        <h1 class="text-5xl md:text-7xl mb-4 text-white">A Arte do Fogo e da <span class="amber-text">Cevada</span></h1>
+        <p class="text-lg md:text-xl max-w-2xl text-gray-300 font-light">Cortes nobres selecionados, maturados e preparados na brasa viva, acompanhados do melhor chopp artesanal da região.</p>
+    </header>
+
+    <main id="cardapio" class="max-w-6xl mx-auto py-20 px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl mb-2">Nosso Cardápio</h2>
+            <div class="h-1 w-20 bg-amber-600 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            
+            <div>
+                <h3 class="text-2xl amber-text mb-6 flex items-center">
+                    <span class="mr-3">🥩</span> Pratos Principais
+                </h3>
+                <div class="space-y-6">
+                    <div class="bg-card p-4 rounded-lg flex justify-between items-start">
+                        <div>
+                            <h4 class="text-white font-bold">Tomahawk Âmbar (1kg)</h4>
+                            <p class="text-sm text-gray-400">Grelhado na brasa com manteiga de ervas e alho assado.</p>
+                        </div>
+                        <span class="amber-text font-bold">R$ 189</span>
+                    </div>
+                    <div class="bg-card p-4 rounded-lg flex justify-between items-start">
+                        <div>
+                            <h4 class="text-white font-bold">Picanha Premium (300g)</h4>
+                            <p class="text-sm text-gray-400">Acompanha farofa crocante de bacon e chimichurri house.</p>
+                        </div>
+                        <span class="amber-text font-bold">R$ 82</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl amber-text mb-6 flex items-center">
+                    <span class="mr-3">🍺</span> Chopp & Bebidas
+                </h3>
+                <div class="space-y-6">
+                    <div class="bg-card p-4 rounded-lg flex justify-between items-start border-l-4 border-amber-600">
+                        <div>
+                            <h4 class="text-white font-bold">Chopp Pilsen (500ml)</h4>
+                            <p class="text-sm text-gray-400">Servido em caneca congelada a -2°C.</p>
+                        </div>
+                        <span class="amber-text font-bold">R$ 14</span>
+                    </div>
+                    <div class="bg-card p-4 rounded-lg flex justify-between items-start">
+                        <div>
+                            <h4 class="text-white font-bold">Suco de Tangerina com Gengibre</h4>
+                            <p class="text-sm text-gray-400">100% natural e refrescante.</p>
+                        </div>
+                        <span class="amber-text font-bold">R$ 12</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-2xl amber-text mb-6 flex items-center">
+                    <span class="mr-3">🍟</span> Porções
+                </h3>
+                <div class="space-y-6">
+                    <div class="bg-card p-4 rounded-lg flex justify-between items-start">
+                        <div>
+                            <h4 class="text-white font-bold">Bolinho de Costela (6 unid.)</h4>
+                            <p class="text-sm text-gray-400">Recheado com queijo coalho derretido.</p>
+                        </div>
+                        <span class="amber-text font-bold">R$ 48</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-neutral-950 py-10 text-center border-t border-neutral-900">
+        <p class="text-gray-500 text-sm">© 2024 Âmbar & Brasa Steakhouse. Desenvolvido com foco em excelência.</p>
+    </footer>
+
+</body>
+</html>
