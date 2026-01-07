@@ -3,106 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Âmbar & Brasa | Steakhouse</title>
+    <title>Âmbar & Brasa | Steakhouse & Bar</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #e5e5e5; }
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #e5e5e5; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
         .amber-text { color: #d97706; }
-        .bg-card { background-color: #171717; border: 1px solid #262626; }
-        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1469'); background-size: cover; background-position: center; }
+        .bg-card { background-color: #121212; border: 1px solid #1f1f1f; transition: transform 0.3s; }
+        .bg-card:hover { transform: translateY(-5px); border-color: #d97706; }
+        .badge-hh { background: #d97706; color: black; font-weight: bold; padding: 2px 8px; border-radius: 4px; font-size: 10px; }
     </style>
 </head>
 <body>
 
-    <nav class="p-6 flex justify-between items-center border-b border-neutral-800 sticky top-0 bg-black z-50">
-        <div class="text-2xl font-bold amber-text">ÂMBAR & <span class="text-white">BRASA</span></div>
-        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+    <nav class="p-5 flex justify-between items-center border-b border-neutral-800 sticky top-0 bg-black/95 backdrop-blur-md z-50">
+        <div class="text-xl font-bold amber-text uppercase tracking-tighter">ÂMBAR & <span class="text-white">BRASA</span></div>
+        <div class="hidden lg:flex space-x-6 text-xs uppercase tracking-widest font-semibold">
             <a href="#cardapio" class="hover:text-amber-500 transition">Cardápio</a>
-            <a href="#reservas" class="hover:text-amber-500 transition">Reservas</a>
-            <a href="#contato" class="hover:text-amber-500 transition">Contato</a>
+            <a href="#delivery" class="hover:text-amber-500 transition">Delivery</a>
+            <a href="#happyhour" class="text-orange-400 border-b border-orange-400">Happy Hour</a>
         </div>
-        <button class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-full text-sm font-semibold transition">RESERVAR</button>
+        <a href="#delivery" class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2 rounded-md text-xs font-bold transition">PEDIR AGORA</a>
     </nav>
 
-    <header class="h-[70vh] flex flex-col justify-center items-center text-center px-4 hero-gradient">
-        <h1 class="text-5xl md:text-7xl mb-4 text-white">A Arte do Fogo e da <span class="amber-text">Cevada</span></h1>
-        <p class="text-lg md:text-xl max-w-2xl text-gray-300 font-light">Cortes nobres selecionados, maturados e preparados na brasa viva, acompanhados do melhor chopp artesanal da região.</p>
+    <header class="py-20 px-6 text-center bg-[url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1470&auto=format&fit=crop')] bg-cover bg-center bg-fixed relative">
+        <div class="absolute inset-0 bg-black/70"></div>
+        <div class="relative z-10">
+            <span class="text-amber-500 font-bold tracking-[0.3em] uppercase text-sm">Desde 2026 — Já estamos a mil!</span>
+            <h1 class="text-5xl md:text-7xl mt-4 mb-6 text-white uppercase italic">Fogo, Vinho e <br> Cevada</h1>
+            <p class="text-gray-400 max-w-xl mx-auto">Funcionamento: <span class="text-white">15:00 às 04:00</span> — A madrugada mais saborosa da cidade.</p>
+        </div>
     </header>
 
-    <main id="cardapio" class="max-w-6xl mx-auto py-20 px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl mb-2">Nosso Cardápio</h2>
-            <div class="h-1 w-20 bg-amber-600 mx-auto"></div>
+    <section id="happyhour" class="bg-amber-900/10 py-10 border-y border-amber-900/30">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-2xl amber-text italic uppercase">🍻 Happy Hour Âmbar</h2>
+            <p class="text-sm mt-2 text-amber-200/70">Das 20h às 00h: **CHOPP EM DOBRO** e aperitivos selecionados com 30% OFF</p>
+        </div>
+    </section>
+
+    <main id="cardapio" class="max-w-7xl mx-auto py-16 px-6 grid grid-cols-1 lg:grid-cols-3 gap-12">
+        
+        <div class="space-y-12">
+            <section>
+                <h3 class="text-3xl mb-8 border-l-4 border-amber-600 pl-4 uppercase">Cortes Nobres</h3>
+                <div class="space-y-4">
+                    <div class="bg-card p-4 rounded shadow-lg">
+                        <div class="flex justify-between font-bold"><span>Ancho na Brasa (400g)</span> <span class="amber-text">R$ 89</span></div>
+                        <p class="text-xs text-gray-500 mt-1">Marmorização extrema, servido com chimichurri.</p>
+                    </div>
+                    <div class="bg-card p-4 rounded">
+                        <div class="flex justify-between font-bold"><span>Fraldinha Especial</span> <span class="amber-text">R$ 76</span></div>
+                        <p class="text-xs text-gray-500 mt-1">Corte longo, assado lentamente na grelha.</p>
+                    </div>
+                    <div class="bg-card p-4 rounded italic border border-amber-900/50">
+                        <div class="flex justify-between font-bold"><span>Prime Rib Âmbar</span> <span class="amber-text">R$ 145</span></div>
+                        <p class="text-xs text-gray-500 mt-1">O rei da casa. 600g de carne com osso.</p>
+                    </div>
+                    <div class="bg-card p-4 rounded">
+                        <div class="flex justify-between font-bold"><span>Assado de Tira</span> <span class="amber-text">R$ 68</span></div>
+                        <p class="text-xs text-gray-500 mt-1">Corte transversal da costela premium.</p>
+                    </div>
+                    <div class="bg-card p-4 rounded">
+                        <div class="flex justify-between font-bold"><span>Maminha ao Alho</span> <span class="amber-text">R$ 72</span></div>
+                        <p class="text-xs text-gray-500 mt-1">Fatias finas com crosta de alho tostado.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-2xl mb-6 text-gray-400 uppercase">Saladas Frescas</h3>
+                <div class="space-y-4">
+                    <div class="bg-card p-4 rounded">
+                        <div class="flex justify-between font-bold text-sm"><span>Caesar da Brasa</span> <span>R$ 38</span></div>
+                        <p class="text-xs text-gray-500 mt-1">Alface romana grelhada, croutons e molho artesanal.</p>
+                    </div>
+                    <div class="bg-card p-4 rounded">
+                        <div class="flex justify-between font-bold text-sm"><span>Salada Âmbar</span> <span>R$ 35</span></div>
+                        <p class="text-xs text-gray-500 mt-1">Mix de folhas, nozes, queijo gorgonzola e mel.</p>
+                    </div>
+                    <div class="bg-card p-4 rounded">
+                        <div class="flex justify-between font-bold text-sm"><span>Caprese Especial</span> <span>R$ 42</span></div>
+                        <p class="text-xs text-gray-500 mt-1">Tomates cereja masserados e búfala fresca.</p>
+                    </div>
+                </div>
+            </section>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-12">
-            
-            <div>
-                <h3 class="text-2xl amber-text mb-6 flex items-center">
-                    <span class="mr-3">🥩</span> Pratos Principais
-                </h3>
-                <div class="space-y-6">
-                    <div class="bg-card p-4 rounded-lg flex justify-between items-start">
-                        <div>
-                            <h4 class="text-white font-bold">Tomahawk Âmbar (1kg)</h4>
-                            <p class="text-sm text-gray-400">Grelhado na brasa com manteiga de ervas e alho assado.</p>
-                        </div>
-                        <span class="amber-text font-bold">R$ 189</span>
+        <div class="space-y-12">
+            <section>
+                <h3 class="text-3xl mb-8 border-l-4 border-amber-600 pl-4 uppercase font-bold">Burgers & Combo</h3>
+                <div class="space-y-4">
+                    <div class="bg-card p-4 rounded border-b-2 border-amber-600/30">
+                        <div class="flex justify-between font-bold"><span>Combo Âmbar King</span> <span class="amber-text">R$ 58</span></div>
+                        <p class="text-xs text-gray-400 mt-1 italic">Burger 180g + Batata P + Long Neck ou Suco.</p>
                     </div>
-                    <div class="bg-card p-4 rounded-lg flex justify-between items-start">
-                        <div>
-                            <h4 class="text-white font-bold">Picanha Premium (300g)</h4>
-                            <p class="text-sm text-gray-400">Acompanha farofa crocante de bacon e chimichurri house.</p>
-                        </div>
-                        <span class="amber-text font-bold">R$ 82</span>
+                    <div class="bg-card p-4 rounded">
+                        <div class="flex justify-between font-bold"><span>Smash Bacon Classic</span> <span class="amber-text">R$ 32</span></div>
                     </div>
-                </div>
-            </div>
-
-            <div>
-                <h3 class="text-2xl amber-text mb-6 flex items-center">
-                    <span class="mr-3">🍺</span> Chopp & Bebidas
-                </h3>
-                <div class="space-y-6">
-                    <div class="bg-card p-4 rounded-lg flex justify-between items-start border-l-4 border-amber-600">
-                        <div>
-                            <h4 class="text-white font-bold">Chopp Pilsen (500ml)</h4>
-                            <p class="text-sm text-gray-400">Servido em caneca congelada a -2°C.</p>
-                        </div>
-                        <span class="amber-text font-bold">R$ 14</span>
+                    <div class="bg-card p-4 rounded">
+                        <div class="flex justify-between font-bold"><span>Trifásico Cheese</span> <span class="amber-text">R$ 45</span></div>
+                        <p class="text-xs text-gray-500 mt-1 font-bold">Cheddar, Gouda e Prato maçaricados.</p>
                     </div>
-                    <div class="bg-card p-4 rounded-lg flex justify-between items-start">
-                        <div>
-                            <h4 class="text-white font-bold">Suco de Tangerina com Gengibre</h4>
-                            <p class="text-sm text-gray-400">100% natural e refrescante.</p>
-                        </div>
-                        <span class="amber-text font-bold">R$ 12</span>
+                    <div class="bg-card p-4 rounded">
+                        <div class="flex justify-between font-bold"><span>O Defumado</span> <span class="amber-text">R$ 42</span></div>
+                    </div>
+                    <div class="bg-card p-4 rounded">
+                        <div class="flex justify-between font-bold"><span>Vegetariano da Casa</span> <span class="amber-text">R$ 39</span></div>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div>
-                <h3 class="text-2xl amber-text mb-6 flex items-center">
-                    <span class="mr-3">🍟</span> Porções
-                </h3>
+            <section>
+                <h3 class="text-2xl mb-6 text-gray-400 uppercase italic">Sucos Naturais</h3>
+                <div class="grid grid-cols-2 gap-4 text-xs font-bold">
+                    <div class="bg-card p-3 rounded">Laranja R$ 12</div>
+                    <div class="bg-card p-3 rounded">Limonada Suíça R$ 14</div>
+                    <div class="bg-card p-3 rounded">Abacaxi c/ Hortelã R$ 13</div>
+                    <div class="bg-card p-3 rounded">Frutas Vermelhas R$ 16</div>
+                    <div class="bg-card p-3 rounded">Tangerina R$ 13</div>
+                    <div class="bg-card p-3 rounded">Uva Integral R$ 12</div>
+                </div>
+            </section>
+        </div>
+
+        <div class="space-y-12">
+            <section>
+                <h3 class="text-3xl mb-8 border-l-4 border-amber-600 pl-4 uppercase">Adegas & Cevada</h3>
                 <div class="space-y-6">
-                    <div class="bg-card p-4 rounded-lg flex justify-between items-start">
-                        <div>
-                            <h4 class="text-white font-bold">Bolinho de Costela (6 unid.)</h4>
-                            <p class="text-sm text-gray-400">Recheado com queijo coalho derretido.</p>
+                    <div>
+                        <h4 class="text-amber-500 text-xs font-bold mb-3 tracking-widest uppercase">Vinhos (Garrafa/Taça)</h4>
+                        <div class="bg-card p-4 rounded space-y-3">
+                            <div class="flex justify-between text-sm italic"><span>Malbec Argentino</span> <span>R$ 110/28</span></div>
+                            <div class="flex justify-between text-sm italic"><span>Cabernet Sauvignon</span> <span>R$ 95/25</span></div>
+                            <div class="flex justify-between text-sm italic"><span>Chardonnay Branco</span> <span>R$ 88/22</span></div>
+                            <div class="flex justify-between text-sm italic"><span>Rosé de Provence</span> <span>R$ 125/32</span></div>
                         </div>
-                        <span class="amber-text font-bold">R$ 48</span>
+                    </div>
+                    <div>
+                        <h4 class="text-amber-500 text-xs font-bold mb-3 tracking-widest uppercase">Long Neck & Cervejas</h4>
+                        <div class="grid grid-cols-1 gap-2">
+                            <div class="bg-card p-3 flex justify-between text-sm"><span>Stella Artois</span> <span>R$ 12</span></div>
+                            <div class="bg-card p-3 flex justify-between text-sm"><span>Corona Extra</span> <span>R$ 14</span></div>
+                            <div class="bg-card p-3 flex justify-between text-sm"><span>Heineken 0.0</span> <span>R$ 13</span></div>
+                            <div class="bg-card p-3 flex justify-between text-sm"><span>Spaten</span> <span>R$ 11</span></div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
+            <section id="delivery" class="bg-amber-600 p-6 rounded text-black">
+                <h3 class="text-2xl font-bold uppercase mb-2">🚀 Delivery</h3>
+                <p class="text-sm font-semibold mb-4 text-amber-950">Peça via WhatsApp e receba em casa com embalagem térmica.</p>
+                <button class="w-full bg-black text-white py-3 font-bold rounded hover:bg-neutral-800 transition">ABRIR CARDÁPIO DELIVERY</button>
+            </section>
         </div>
     </main>
 
-    <footer class="bg-neutral-950 py-10 text-center border-t border-neutral-900">
-        <p class="text-gray-500 text-sm">© 2024 Âmbar & Brasa Steakhouse. Desenvolvido com foco em excelência.</p>
+    <footer class="bg-black py-12 px-6 border-t border-neutral-900 text-center">
+        <p class="text-amber-600 font-bold mb-2 uppercase tracking-widest text-xs">Aberto das 15:00 às 04:00</p>
+        <p class="text-gray-600 text-[10px]">Âmbar & Brasa Steakhouse © 2026. Todos os direitos reservados.</p>
     </footer>
 
 </body>
